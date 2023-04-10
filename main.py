@@ -1,3 +1,5 @@
+#!/usr/bin/env python.
+
 """
 Ce programme en Python permet de calculer la probabilité de différents scénarios dans un jeu de hasard. 
 
@@ -12,10 +14,13 @@ Ces résultats sont ensuite enregistrés dans un fichier Excel, ce qui permet de
 Enfin, le programme affiche un message indiquant le temps qu'il a pris pour charger les données.
 """
 
-import asyncio, time
+# Module Python
+import asyncio, time, math
 
+# Method use to make this
 from excel import makeExcel
 from graphic import makeGraphic
+from randomgraph import randomGraph
 
 # Gain and loss amounts
 GAIN, LOSS, TAB = 2, 1, {}
@@ -35,14 +40,13 @@ async def check(columns:int, row:int, euro:int, step:int = 0) -> None:
         await check(columns, row, euro - LOSS, step + 1)
 
 # Prompt user for number of columns and rows
-columns = min(int(input("Nombre de colonne (Branche - Maximun 20) : ")), 20)
-rows = min(int(input("Nombre de ligne (Somme Euro - Maximun 20) : ")), 20)
+columns, rows = min(int(input('Nombre de colonne (Branche - Maximun 20) : ')), 20), min(int(input('Nombre de ligne (Somme Euro - Maximun 20) : ')), 20)
 
 # Prompt user for initial sum
-sum = int(input("Somme initial : "))
+sum = int(input('Somme initial : '))
 
 # Print message to indicate data loading
-print("Chargement des données...")
+print('Chargement des données...')
 
 # Record start time
 start_time = time.time()
@@ -51,9 +55,13 @@ start_time = time.time()
 for row in range(rows + 1):
     asyncio.run(check(columns, row, sum))
 
-makeExcel(rows, columns, TAB)
+# Transform TAB to excel file's
+makeExcel(TAB, columns)
 
 makeGraphic(TAB[0])
 
+randomGraph()
+
 # Print elapsed time
-print(f'Données chargées en {(time.time() - start_time):.2f} secondes.')
+elapsed_time = time.time() - start_time
+print(f"Données chargées en {(elapsed_time):.2f} secondes.")

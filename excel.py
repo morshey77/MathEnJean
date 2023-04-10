@@ -1,7 +1,6 @@
 import xlsxwriter
 
-def makeExcel(rows: int, columns: int, tab: dict) -> None :
-
+def makeExcel(tab:dict, columns:int) -> None:
     # Create an new Excel file and add a worksheet.
     workbook = xlsxwriter.Workbook('./result/proba.xlsx')
     worksheet = workbook.add_worksheet()
@@ -20,7 +19,7 @@ def makeExcel(rows: int, columns: int, tab: dict) -> None :
         worksheet.write(f"{chr(ord('A') + c + 1)}1", c, bold)
 
     for row in tab:
-        worksheet.write(f'A{row + 2}', str(row) + 'E', bold)
+        worksheet.write(f"A{row + 2}", str(row) + 'E', bold)
 
         for column, value in tab[row].items():
             worksheet.write(row + 1, column + 1, value)
