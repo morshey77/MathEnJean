@@ -26,7 +26,7 @@ def makeGraphic(tab:dict) -> None:
         plt.plot(range(l), tab[h])
         print(max(tab[h]))
 
-    plt.title('Simulation du solde de plusieurs personnes \n qui joue à chaque tour (branche)')
+    plt.title('Simulation du solde de plusieurs personnes \n qui jouent à chaque tour (branche)')
     plt.xlabel('Nème branche')
     plt.ylabel("Nombre d'euro")
     plt.savefig('./result/randomGraph.png')
