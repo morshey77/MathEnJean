@@ -20,7 +20,6 @@ import asyncio, time, math
 # Method use to make this
 from excel import makeExcel
 from graphic import makeGraphic
-from randomgraph import randomGraph
 
 # Gain and loss amounts
 GAIN, LOSS, TAB = 2, 1, {}
@@ -59,8 +58,6 @@ for row in range(rows + 1):
 makeExcel(TAB, columns)
 
 makeGraphic(TAB[0])
-
-randomGraph()
 
 # Print elapsed time
 elapsed_time = time.time() - start_time
