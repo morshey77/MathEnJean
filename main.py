@@ -17,48 +17,48 @@ Enfin, le programme affiche un message indiquant le temps qu'il a pris pour char
 # Module Python
 import asyncio, time, math
 
-# Method use to make this
+# Importation des fonctions nécéssaire à l'affichage
 from excel import makeExcel
 from graphic import makeGraphic
 
-# Gain and loss amounts
+# Valeur du gain, perte ainsi que la tableau de valeur
 GAIN, LOSS, TAB = 2, 1, {}
 
-# Recursive function to check all probabilities
+# Fonction recursive pour enregister tout les branches
 async def check(columns:int, row:int, euro:int, step:int = 0) -> None:
     if euro == row:
-        # Update probabilities in TAB
+        # Mise à jour du nombre de branche dans le tableau de valeur
         if row not in TAB:
             TAB[row] = {i: 0 for i in range(columns + 1)}
         TAB[row][step] += 1
 
-    # Check for valid steps and euro values
+    # Vérifie si il na va pas trop long ou si l'on est pas ruiné
     if euro > 0 and step < columns:
-        # Check gain and loss scenarios
+        # Vérifie les scénarios gagnant et perdant
         await check(columns, row, euro + GAIN, step + 1)
         await check(columns, row, euro - LOSS, step + 1)
 
-# Prompt user for number of columns and rows
+# Demander à l'utilisateur le nombre de colonnes et de lignes
 columns, rows = min(int(input('Nombre de colonne (Branche - Maximun 20) : ')), 20), min(int(input('Nombre de ligne (Somme Euro - Maximun 20) : ')), 20)
 
-# Prompt user for initial sum
+# Demander à l'utilisateur la somme initiale
 sum = int(input('Somme initial : '))
 
-# Print message to indicate data loading
+# Afficher un message pour indiquer le chargement des données
 print('Chargement des données...')
 
-# Record start time
+# Enregistrer l'heure de début
 start_time = time.time()
 
-# Launch probability calculations
+# Lancement des calculs de branche
 for row in range(rows + 1):
     asyncio.run(check(columns, row, sum))
 
-# Transform TAB to excel file's
+# Transforme le tableau de valeur en fichier excel
 makeExcel(TAB, columns)
-
+# Transforme les ruines du tableau de valeur en un graphique
 makeGraphic(TAB[0])
 
-# Print elapsed time
+# Afficher le temps écoulé
 elapsed_time = time.time() - start_time
 print(f"Données chargées en {(elapsed_time):.2f} secondes.")
