@@ -39,7 +39,8 @@ async def check(columns:int, row:int, euro:int, step:int = 0) -> None:
         await check(columns, row, euro - LOSS, step + 1)
 
 # Demander à l'utilisateur le nombre de colonnes et de lignes
-columns, rows = min(int(input('Nombre de colonne (Branche - Maximun 20) : ')), 20), min(int(input('Nombre de ligne (Somme Euro - Maximun 20) : ')), 20)
+columns = min(int(input('Nombre de colonne (Branche - Maximun 20) : ')), 20)
+rows = min(int(input('Nombre de ligne (Somme Euro - Maximun 20) : ')), 20)
 
 # Demander à l'utilisateur la somme initiale
 sum = int(input('Somme initial : '))
