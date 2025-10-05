@@ -11,18 +11,6 @@ Le code, écrit en **Python**, propose différents outils pour :
 
 L’objectif est de fournir un support numérique pour explorer des problèmes mathématiques, automatiser certaines analyses et rendre plus accessibles les démarches de recherche menées dans les ateliers MATh.en.JEANS.  
 
----
-
-## 🤝 Pourquoi « MATh.en.JEANS » ?
-Le projet a été conçu dans le cadre d’un atelier **MATh.en.JEANS**, d’où son nom.  
-Il a pour but de mettre à disposition des élèves et encadrants des outils simples pour :
-- expérimenter des solutions mathématiques,  
-- tester des hypothèses,  
-- visualiser des résultats,  
-- partager leurs travaux sous une forme reproductible.  
-
----
-
 ## 📚 Qu’est-ce que MATh.en.JEANS ?
 **MATh.en.JEANS** est une association française qui propose aux jeunes (collégiens, lycéens, étudiants) de vivre une véritable **expérience de recherche mathématique**.  
 
