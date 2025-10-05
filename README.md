@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="banner.png" alt="MathEnJean banner" width="600">
+</p>
+
 # 📘 MathEnJean
 
 ## 🎯 Objectif du projet
