@@ -6,8 +6,6 @@
 
 [🇬🇧 English](#-english-version) | [🇫🇷 Français](#-version-française)
 
----
-
 ## 🌍 English version
 
 ### 🎯 Project Goal
@@ -47,7 +45,7 @@ The main purpose is to provide a digital support tool to explore mathematical pr
    git clone https://github.com/morshey77/MathEnJean.git
    cd MathEnJean
 
-## 🌍 Version français
+## 🌍 Version française
 
 ## 🎯 Objectif du projet
 Ce dépôt contient un projet développé dans le cadre de **MATh.en.JEANS**, une initiative visant à faire découvrir la recherche mathématique aux élèves.  
