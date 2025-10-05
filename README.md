@@ -4,6 +4,51 @@
 
 # 📘 MathEnJean
 
+[🇬🇧 English](#-english-version) | [🇫🇷 Français](#-version-française)
+
+---
+
+## 🌍 English version
+
+### 🎯 Project Goal
+This repository contains a project developed as part of **MATh.en.JEANS**, an initiative that introduces students to real mathematical research.  
+
+The code, written in **Python**, provides several tools to:
+- 📊 handle and process data (`excel.py`)  
+- 🖼️ generate visualizations and graphics (`graphic.py`)  
+- 🧮 perform mathematical computations (`main.py`)  
+- 📁 store results (`/result`)  
+
+The main purpose is to provide a digital support tool to explore mathematical problems, automate analyses, and make research activities in MATh.en.JEANS workshops more accessible.  
+
+---
+
+### 📚 What is MATh.en.JEANS?
+**MATh.en.JEANS** is a French non-profit association that gives young people (middle school, high school, university students) the opportunity to live a genuine **mathematical research experience**.  
+
+#### 🔎 How it works
+- A researcher proposes one or more **open research topics**.  
+- Volunteer students, supported by their teachers, work in small groups throughout the school year.  
+- They experiment, test, make mistakes, and start over — in short, they do mathematics **like real researchers**.  
+- Groups from different schools (paired workshops) exchange ideas and regularly meet with the researcher.  
+- At the end of the year, they present their findings during a **MATh.en.JEANS conference** and publish an article.  
+
+#### 🏅 Recognition
+- Approved by the **French Ministry of Education**  
+- Awards: *d’Alembert Prize (1992)*, *La France s’Engage Label (2015)*, *CNRS Medal for Science Mediation (2023)*  
+
+👉 More info on the [official website](https://www.mathenjeans.fr).  
+
+---
+
+### 🚀 Installation & Usage
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/morshey77/MathEnJean.git
+   cd MathEnJean
+
+## 🌍 Version français
+
 ## 🎯 Objectif du projet
 Ce dépôt contient un projet développé dans le cadre de **MATh.en.JEANS**, une initiative visant à faire découvrir la recherche mathématique aux élèves.  
 
